@@ -5,7 +5,7 @@
 
 ## 📌 Overview
 
-This repository contains the code and experimental setup for the project titled  
+This repository contains the code and experimental setup for the summer internship 2025 project titled  
 **"A Study of Sparsity-Promoting Priors in Bayesian Neural Networks"**  
 presented by **Gitika** (IISER Tirupati)  
 under the supervision of **Dr. Sandipan Karmakar** (MNIT Jaipur).
