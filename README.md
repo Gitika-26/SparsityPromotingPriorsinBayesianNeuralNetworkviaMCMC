@@ -1,3 +1,6 @@
+[View Poster](https://drive.google.com/file/d/1qsRfbHS_og1ObaZAAmBkizDx9DSb2xoh/view?usp=sharing)
+[View Detailed Report](https://drive.google.com/file/d/1vlE5LqIjMJLnLCez5QRZGxfV8DI19ZuV/view?usp=sharing)
+
 # A Study of Sparsity-Promoting Priors in Bayesian Neural Networks
 
 ## 📌 Overview
@@ -43,10 +46,7 @@ $$
 $$
 w \sim \mathcal{N}(0, \tau^2 \lambda^2), \quad \lambda \sim \text{C}^+(0,1), \quad \tau \sim \text{C}^+(0,1)
 $$
-
-- \( \text{C}^+ \): Half-Cauchy distribution  
-- \( \lambda \): Local shrinkage  
-- \( \tau \): Global shrinkage  
+  
 
 ### 🟥 Spike-and-Slab Prior
 
@@ -54,9 +54,6 @@ $$
 p(w) = \pi \cdot \delta(w) + (1 - \pi) \cdot \mathcal{N}(w \mid 0, \sigma^2)
 $$
 
-- \( \delta(w) \): Dirac delta function (spike at zero)  
-- \( \pi \): Probability of zero weights  
-- \( \sigma^2 \): Variance of the slab
 
 ---
 
@@ -93,9 +90,9 @@ $$
 
 | Prior              | Mean Squared Error (MSE) | Observations                                             |
 |--------------------|--------------------------|----------------------------------------------------------|
-| Gaussian (Baseline)| 15.72                    | Higher variance in predictions; moderate overfitting     |
-| Horseshoe          | 11.30                    | Better generalization with many weights driven to zero   |
-| Spike-and-Slab     | 10.85                    | Most sparse and accurate; pruned irrelevant weights      |
+| Gaussian (Baseline)| 8.54                     | Higher variance in predictions; moderate overfitting     |
+| Horseshoe          | 0.66                     | Better generalization with many weights driven to zero   |
+| Spike-and-Slab     | 0.91                     | Sparse and moderately accurate; pruned some weights      |
 
 ---
 
@@ -103,9 +100,9 @@ $$
 
 | Prior              | Accuracy (%) | F1 Score | Observations                                               |
 |--------------------|--------------|----------|------------------------------------------------------------|
-| Gaussian (Baseline)| 85.2         | 0.851    | Overfits on some features; limited feature selection       |
-| Horseshoe          | 88.7         | 0.883    | Robust performance; adapts well to feature importance      |
-| Spike-and-Slab     | 89.5         | 0.891    | Strong feature pruning; highly sparse and interpretable    |
+| Gaussian (Baseline)| 74.75        | 0.82     | Overfits on some features; limited feature selection       |
+| Horseshoe          | 83.75        | 0.84     | Robust performance; adapts well to feature importance      |
+| Spike-and-Slab     | 87.25        | 0.88     | Strong feature pruning; highly sparse and interpretable    |
 
 ---
 
